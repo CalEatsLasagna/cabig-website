@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Callihan Creations</title>
+  <link rel="stylesheet" href="/styles/base.css">
+  <style>
+    .about-layout {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .portrait {
+      width: 280px;
+      height: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    @media (max-width: 768px) {
+      .about-layout { flex-direction: column; text-align: center; }
+      .portrait { width: 70%; max-width: 320px; }
+    }
+  
+    /* Contact form */
+    .contact-section {
+      padding: 4rem 0;
+      background: #0b0b0b08;
+    }
+    .contact-card {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .contact-grid .full { grid-column: 1 / -1; }
+    .contact-card label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .contact-card input[type="text"],
+    .contact-card input[type="email"],
+    .contact-card textarea {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #d7d7d7;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+    }
+    .contact-card textarea { min-height: 160px; resize: vertical; }
+    .contact-card button {
+      display: inline-block;
+      border: 0;
+      border-radius: 10px;
+      padding: 0.85rem 1.25rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: #1e40af; /* blue-800 */
+      color: #fff;
+    }
+    .contact-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.75rem;
+    }
+    .hidden-hp { position: absolute !important; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="/index.html">
+        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+        <span>Callihan Creations</span>
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a aria-current="page" href="/index.html">Home</a></li>
+          <li><a href="/cabig.html">Cabig Games</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Callihan Creations</h1>
+        <p>Independent developer and designer building creative experiences across games, photography, and visual design.</p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container about-layout">
+        <img src="/media/home/calebcallihan10.jpg" alt="Caleb Callihan portrait" class="portrait">
+        <div>
+          
+          <h2>About Me</h2>
+          <p>
+            I'm <strong>Caleb Callihan</strong>, a creative developer and marketer who builds ideas that connect people. I design experiences that combine visual storytelling, practical design, and technical precision across interactive projects, campaigns, and digital media.
+          </p>
+          <p>
+            With experience in <strong>marketing, game design, and brand development</strong>, I focus on turning creative concepts into clear, effective results. My work explores how emotion and aesthetics can drive engagement and how small details can elevate an experience.
+          </p>
+          <p>
+            Outside of development, I explore photography, writing, and design to refine my creative voice. Every project is a chance to learn, adapt, and create something meaningful.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <br>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-card">
+          <form id="contact-form" action="https://formspree.io/f/manlqlpy" method="POST" novalidate>
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_subject" value="New message from Callihan Creations site">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Honeypot -->
+            <div class="hidden-hp">
+              <label>Do not fill this out</label>
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="contact-grid">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required required>
+              </div>
+              
+              <div class="full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." required required></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top:1rem; display:flex; align-items:center; gap:.75rem;">
+              <button type="submit">Send message</button>
+              <span class="contact-meta">You can also email me directly at <a href="mailto:calebcallihan@gmail.com">calebcallihan@gmail.com</a>.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Callihan Creations — All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script>
+  (function() {
+    const FORM_ENDPOINT = 'https://formspree.io/f/manlqlpy'; // <-- Replace with your Form ID
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+      const fd = new FormData(form);
+      if (!fd.get('email') || !fd.get('message')) {
+        alert('Please include your email and a message.');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send message'; }
+        return;
+      }
+      if ((fd.get('_honey') || '').trim().length > 0) {
+        window.location.href = '/thank-you.html';
+        return;
+      }
+
+      const payload = {};
+      fd.forEach((v,k) => payload[k] = v);
+
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (res.ok) {
+          window.location.href = '/thank-you.html';
+          return;
+        }
+        throw new Error('Formspree error');
+      } catch (err) {
+        const name = payload.name || '';
+        const email = payload.email || '';
+        const subject = payload.subject || 'Website contact';
+        const message = payload.message || '';
+        const body = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
+        const mailto = `mailto:calebcallihan@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        window.location.href = mailto;
+      } finally {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send message'; }
+      }
+    });
+  })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photography & Retouching — Callihan Creations</title>
+  <meta name="description" content="Photography and retouching portfolio by Caleb Callihan.">
+  <link rel="stylesheet" href="/styles/base.css">
+  <style>
+    /* simple masonry that works with your current CSS */
+    .masonry{columns:1;column-gap:var(--space-4)}
+    @media(min-width:700px){.masonry{columns:2}}
+    @media(min-width:1000px){.masonry{columns:3}}
+    .masonry figure{break-inside:avoid;margin:0 0 var(--space-4);border:1px solid var(--color-border);
+      border-radius:var(--radius-sm);overflow:hidden;background:var(--color-bg)}
+    .masonry img{width:100%;height:auto;display:block}
+    figcaption{padding:.6rem .8rem;color:var(--color-muted);font-size:.95rem}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="/" aria-label="Home">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12"/></svg>
+        <span>Callihan Creations</span>
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cabig.html">Cabig Games</a></li>
+          <li><a aria-current="page" href="/portfolio.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="kicker">Photography</div>
+        <h1>Portfolio</h1>
+        <p class="lead">A collection of my work! My favorite medium is photography; and here you can find a great variety of my work from both professional and personal settings.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2>Professional Portrait Retouching</h2>
+        <div class="masonry">
+        <figure>
+          <img src="/media/photos/retouch_01_portrait_sun.jpg" alt="Retouching — portrait in direct sun (before/after)." loading="lazy">
+          <figcaption>Retouching — portrait in direct sun (before/after).</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/retouch_02_portrait_muted.jpg" alt="Retouching — portrait tonal cleanup (before/after)." loading="lazy">
+          <figcaption>Retouching — portrait tonal cleanup (before/after).</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/retouch_03_airfield.jpg" alt="Retouching — airfield portrait (before/after)." loading="lazy">
+          <figcaption>Retouching — airfield portrait (before/after).</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/retouch_04_white_dress.jpg" alt="Retouching — outdoor portrait in white dress (before/after)." loading="lazy">
+          <figcaption>Retouching — outdoor portrait in white dress (before/after).</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/retouch_05_family.jpg" alt="Retouching — family group (before/after)." loading="lazy">
+          <figcaption>Retouching — family group (before/after).</figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+</section>
+  
+    <section class="section">
+      <div class="container">
+        <h2>Personal work</h2>
+        <div class="grid-gallery" style="margin-top:var(--space-4)">
+        <figure>
+          <img src="/media/photos/personal/door_bw.jpg" alt="Industrial door — black & white study." loading="lazy">
+          <figcaption>Industrial door — black & white study.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/plaza_night.jpg" alt="Plaza at night — string lights and mural." loading="lazy">
+          <figcaption>Plaza at night — string lights and mural.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/aspen_swamp.jpg" alt="Aspen grove — flooded basin." loading="lazy">
+          <figcaption>Aspen grove — flooded understory.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/slot_falls.jpg" alt="Hidden Falls — afternoon light." loading="lazy">
+          <figcaption>Waterfall in slot — afternoon light.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/pigeon_on_post.jpg" alt="Pigeon on post — golden hour." loading="lazy">
+          <figcaption>Pigeon on post — golden hour.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/poppies_close.jpg" alt="Poppies — macro detail." loading="lazy">
+          <figcaption>Poppies — macro detail.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/snowies_pano.jpg" alt="Snowy Range — panorama at the lake." loading="lazy">
+          <figcaption>Snowy Range — panorama at the lake.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/marmot.jpg" alt="Marmot in limestone — close up." loading="lazy">
+          <figcaption>Marmot in talus — close up.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/eisenhower_building.jpg" alt="Eisenhower Executive Office Building — holiday garland." loading="lazy">
+          <figcaption>Eisenhower Executive Office Building — holiday garland.</figcaption>
+        </figure>
+        <figure>
+          <img src="/media/photos/personal/cupcakes.jpg" alt="Cupcakes — café window light." loading="lazy">
+          <figcaption>Cupcakes — café window light.</figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+  <footer class="site-footer"><div class="container small"> <span id="year"></span> Caleb Callihan</div></footer>
+  <script src="/scripts/main.js"></script>
+</body>
+</html>
