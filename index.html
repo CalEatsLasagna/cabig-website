@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Callihan Creations</title>
-  <link rel="stylesheet" href="/styles/base.css">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Callihan Creations</title>
+<link href="/styles/base.css" rel="stylesheet"/>
+<style>
     .about-layout {
       display: flex;
       flex-wrap: wrap;
@@ -76,104 +77,92 @@
     .hidden-hp { position: absolute !important; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 
   </style>
-</head>
+</meta></head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="site-logo" href="/index.html">
-        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
-        <span>Callihan Creations</span>
-      </a>
-      <nav class="site-nav">
-        <ul>
-          <li><a aria-current="page" href="/index.html">Home</a></li>
-          <li><a href="/cabig.html">Cabig Games</a></li>
-          <li><a href="/portfolio.html">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container">
-        <h1>Callihan Creations</h1>
-        <p>Independent developer and designer building creative experiences across games, photography, and visual design.</p>
-      </div>
-    </section>
-
-    <section class="about-section">
-      <div class="container about-layout">
-        <img src="/media/home/calebcallihan10.jpg" alt="Caleb Callihan portrait" class="portrait">
-        <div>
-          
-          <h2>About Me</h2>
-          <p>
+<header class="site-header">
+<div class="container">
+<a class="site-logo" href="/index.html">
+<svg aria-hidden="true" height="26" viewbox="0 0 24 24" width="26"><circle cx="12" cy="12" r="10"></circle></svg>
+<span>Callihan Creations</span>
+</a><button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" title="Toggle navigation" type="button"><svg aria-hidden="true" class="icon" height="22" viewBox="0 0 24 24" width="22"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<nav class="site-nav" id="primary-nav">
+<ul>
+<li><a aria-current="page" href="/index.html">Home</a></li>
+<li><a href="/cabig.html">Cabig Games</a></li>
+<li><a href="/portfolio.html">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero">
+<div class="container">
+<h1>Callihan Creations</h1>
+<p>Independent developer and designer building creative experiences across games, photography, and visual design.</p>
+</div>
+</section>
+<section class="about-section">
+<div class="container about-layout">
+<img alt="Caleb Callihan portrait" class="portrait" src="/media/home/calebcallihan10.jpg"/>
+<div>
+<h2>About Me</h2>
+<p>
             I'm <strong>Caleb Callihan</strong>, a creative developer and marketer who builds ideas that connect people. I design experiences that combine visual storytelling, practical design, and technical precision across interactive projects, campaigns, and digital media.
           </p>
-          <p>
+<p>
             With experience in <strong>marketing, game design, and brand development</strong>, I focus on turning creative concepts into clear, effective results. My work explores how emotion and aesthetics can drive engagement and how small details can elevate an experience.
           </p>
-          <p>
+<p>
             Outside of development, I explore photography, writing, and design to refine my creative voice. Every project is a chance to learn, adapt, and create something meaningful.
           </p>
-
-        </div>
-      </div>
-    </section>
-
-    <br>
-
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-card">
-          <form id="contact-form" action="https://formspree.io/f/manlqlpy" method="POST" novalidate>
-            <!-- FormSubmit settings -->
-            <input type="hidden" name="_subject" value="New message from Callihan Creations site">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            
-            <!-- Honeypot -->
-            <div class="hidden-hp">
-              <label>Do not fill this out</label>
-              <input type="text" name="_honey" tabindex="-1" autocomplete="off">
-            </div>
-
-            <div class="contact-grid">
-              <div>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required>
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required required>
-              </div>
-              
-              <div class="full">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message..." required required></textarea>
-              </div>
-            </div>
-
-            <div style="margin-top:1rem; display:flex; align-items:center; gap:.75rem;">
-              <button type="submit">Send message</button>
-              <span class="contact-meta">You can also email me directly at <a href="mailto:calebcallihan@gmail.com">calebcallihan@gmail.com</a>.</span>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Callihan Creations — All Rights Reserved.</p>
-    </div>
-  </footer>
-  <script>
+</div>
+</div>
+</section>
+<br/>
+<section class="contact-section" id="contact">
+<div class="container">
+<h2>Contact</h2>
+<div class="contact-card">
+<form action="https://formspree.io/f/manlqlpy" id="contact-form" method="POST" novalidate="">
+<!-- FormSubmit settings -->
+<input name="_subject" type="hidden" value="New message from Callihan Creations site"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<!-- Honeypot -->
+<div class="hidden-hp">
+<label>Do not fill this out</label>
+<input autocomplete="off" name="_honey" tabindex="-1" type="text"/>
+</div>
+<div class="contact-grid">
+<div>
+<label for="name">Name</label>
+<input id="name" name="name" placeholder="Your name" required="" type="text"/>
+</div>
+<div>
+<label for="email">Email</label>
+<input id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+</div>
+<div class="full">
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Write your message..." required=""></textarea>
+</div>
+</div>
+<div style="margin-top:1rem; display:flex; align-items:center; gap:.75rem;">
+<button type="submit">Send message</button>
+<span class="contact-meta">You can also email me directly at <a href="mailto:calebcallihan@gmail.com">calebcallihan@gmail.com</a>.</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<p>© 2025 Callihan Creations — All Rights Reserved.</p>
+</div>
+</footer>
+<script>
   (function() {
     const FORM_ENDPOINT = 'https://formspree.io/f/manlqlpy'; // <-- Replace with your Form ID
     const form = document.getElementById('contact-form');
@@ -223,6 +212,26 @@
     });
   })();
   </script>
-</body>
+<script>
+(function(){
+  var header = document.querySelector('.site-header');
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  if (!header || !btn || !nav) return;
 
+  function setOpen(open){
+    header.setAttribute('data-nav-open', open ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  setOpen(false);
+
+  btn.addEventListener('click', function(){
+    var isOpen = header.getAttribute('data-nav-open') === 'true';
+    setOpen(!isOpen);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') setOpen(false);
+  });
+})();</script></body>
 </html>
