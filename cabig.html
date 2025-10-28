@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Cabig Games — Squarewave</title>
-<meta content="Squarewave — an arcade strategy game about breaking blocks, building loadouts, and climbing the leaderboard." name="description">
+<meta content="Squarewave — an arcade strategy game about breaking blocks, building loadouts, and climbing the leaderboard." name="description"/>
 <link href="/styles/base.css" rel="stylesheet"/>
 <style>
     .hero-brand{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
@@ -22,8 +22,8 @@
 <a class="site-logo" href="/index.html">
 <svg aria-hidden="true" height="26" viewbox="0 0 24 24" width="26"><circle cx="12" cy="12" r="10"></circle></svg>
 <span>Callihan Creations</span>
-</a>
-<nav class="site-nav">
+</a><button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" title="Toggle navigation" type="button"><svg aria-hidden="true" class="icon" height="22" viewBox="0 0 24 24" width="22"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<nav class="site-nav" id="primary-nav">
 <ul>
 <li><a href="/index.html">Home</a></li>
 <li><a aria-current="page" href="/cabig.html">Cabig Games</a></li>
@@ -32,7 +32,7 @@
 </nav>
 </div>
 </header>
-<main data-has-storebadge="1" id="main"><a aria-label="View on Google Play (Squarewave)" href="#" id="store-badge" title="View on Google Play (Squarewave)"><img alt="Squarewave icon" id="store-badge-img" onerror="this.onerror=null;this.src='icons/favicon.svg';this.style.background='#111';this.style.padding='8px';" src="media/squarewave/icon.webp"/></a>
+<main id="main">
 <section class="hero">
 <div class="container hero-grid">
 <div>
@@ -120,16 +120,26 @@
 </footer>
 <script>
 (function(){
-  var badge = document.getElementById('store-badge');
-  if(!badge) return;
-  var playLink = document.querySelector('a[href*="play.google.com"]');
-  if (playLink) {
-    badge.href = playLink.href;
-    badge.target = '_blank';
-    badge.rel = 'noopener noreferrer';
-  } else {
-    // If there's no Play link on the page, hide the badge to avoid a dead link
-    badge.style.display = 'none';
+  var header = document.querySelector('.site-header');
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  if (!header || !btn || !nav) return;
+
+  function setOpen(open){
+    header.setAttribute('data-nav-open', open ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
-})();</script></body>
+  setOpen(false);
+
+  btn.addEventListener('click', function(){
+    var isOpen = header.getAttribute('data-nav-open') === 'true';
+    setOpen(!isOpen);
+  });
+
+  // Close on escape
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') setOpen(false);
+  });
+})();
+</script></body>
 </html>
