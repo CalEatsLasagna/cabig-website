@@ -182,3 +182,7 @@ button,.btn{display:inline-flex;align-items:center;justify-content:center;border
 @media (max-width:820px){
   }
 
+
+/* Mobile nav toggle feedback */
+.nav-toggle .icon { transition: transform .15s ease; }
+.nav-toggle[aria-expanded="true"] .icon { transform: rotate(180deg); }

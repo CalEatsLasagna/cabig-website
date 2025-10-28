@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Cabig Games — Squarewave</title>
-<meta content="Squarewave — an arcade strategy game about breaking blocks, building loadouts, and climbing the leaderboard." name="description">
+<meta content="Squarewave — an arcade strategy game about breaking blocks, building loadouts, and climbing the leaderboard." name="description"/>
 <link href="/styles/base.css" rel="stylesheet"/>
 <style>
     .hero-brand{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
@@ -15,19 +15,19 @@
     figure{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden}
     figcaption{padding:var(--space-3);font-size:var(--step--1);color:var(--color-muted)}
   </style>
-</meta></head>
+</head>
 <body>
 <header class="site-header">
 <div class="container">
 <a class="site-logo" href="/index.html">
 <svg aria-hidden="true" height="26" viewbox="0 0 24 24" width="26"><circle cx="12" cy="12" r="10"></circle></svg>
 <span>Callihan Creations</span>
-</a>
-<nav class="site-nav">
+</a><button aria-controls="primary-nav" aria-expanded="false" class="nav-toggle" title="Toggle navigation" type="button"><svg aria-hidden="true" class="icon" height="22" viewbox="0 0 24 24" width="22"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<nav class="site-nav" hidden="" id="primary-nav">
 <ul>
 <li><a href="/index.html">Home</a></li>
 <li><a aria-current="page" href="/cabig.html">Cabig Games</a></li>
-<li><a href="/portfolio.html">Photography</a></li>
+<li><a href="/portfolio.html">Portfolio</a></li>
 </ul>
 </nav>
 </div>
@@ -118,5 +118,61 @@
 <p>© 2025 Cabig Games — An independent project by Caleb Callihan.</p>
 </div>
 </footer>
-</body>
+<script>
+(function(){
+  var header = document.querySelector('.site-header');
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  if (!header || !btn || !nav) return;
+
+  function setOpen(open){
+    header.setAttribute('data-nav-open', open ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  setOpen(false);
+
+  btn.addEventListener('click', function(){
+    var isOpen = header.getAttribute('data-nav-open') === 'true';
+    setOpen(!isOpen);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') setOpen(false);
+  });
+})();</script><script>
+(function(){
+  function navToggleHandler(){
+    var header = document.querySelector('.site-header');
+    var btn = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if(!header || !btn || !nav) return;
+
+    // Set initial hidden state for small screens
+    var mq = window.matchMedia('(max-width: 720px)');
+    function applyInitial(){
+      if(mq.matches){ nav.hidden = true; btn.setAttribute('aria-expanded','false'); }
+      else { nav.hidden = false; btn.setAttribute('aria-expanded','false'); }
+    }
+    applyInitial();
+    mq.addEventListener('change', applyInitial);
+
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', (!expanded).toString());
+      nav.hidden = expanded;
+    });
+
+    // Close after clicking a link (mobile)
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        if(window.matchMedia('(max-width: 720px)').matches){
+          nav.hidden = true;
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    });
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', navToggleHandler); }
+  else { navToggleHandler(); }
+})();</script></body>
 </html>
