@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Cabig Games — Squarewave</title>
-<meta content="Squarewave — an arcade strategy game about breaking blocks, building loadouts, and climbing the leaderboard." name="description"/>
+<meta content="Squarewave — an arcade strategy game about breaking blocks, building loadouts, and climbing the leaderboard." name="description">
 <link href="/styles/base.css" rel="stylesheet"/>
 <style>
     .hero-brand{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
@@ -15,7 +15,7 @@
     figure{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden}
     figcaption{padding:var(--space-3);font-size:var(--step--1);color:var(--color-muted)}
   </style>
-</head>
+</meta></head>
 <body>
 <header class="site-header">
 <div class="container">
@@ -27,12 +27,12 @@
 <ul>
 <li><a href="/index.html">Home</a></li>
 <li><a aria-current="page" href="/cabig.html">Cabig Games</a></li>
-<li><a href="/portfolio.html">Portfolio</a></li>
+<li><a href="/portfolio.html">Photography</a></li>
 </ul>
 </nav>
 </div>
 </header>
-<main id="main">
+<main data-has-storebadge="1" id="main"><a aria-label="View on Google Play (Squarewave)" href="#" id="store-badge" title="View on Google Play (Squarewave)"><img alt="Squarewave icon" id="store-badge-img" onerror="this.onerror=null;this.src='icons/favicon.svg';this.style.background='#111';this.style.padding='8px';" src="media/squarewave/icon.webp"/></a>
 <section class="hero">
 <div class="container hero-grid">
 <div>
@@ -113,10 +113,23 @@
 </div>
 </section>
 </main>
-<div aria-hidden="true" class="bottom-gradient"></div><footer class="site-footer">
+<footer class="site-footer">
 <div class="container">
 <p>© 2025 Cabig Games — An independent project by Caleb Callihan.</p>
 </div>
 </footer>
-</body>
+<script>
+(function(){
+  var badge = document.getElementById('store-badge');
+  if(!badge) return;
+  var playLink = document.querySelector('a[href*="play.google.com"]');
+  if (playLink) {
+    badge.href = playLink.href;
+    badge.target = '_blank';
+    badge.rel = 'noopener noreferrer';
+  } else {
+    // If there's no Play link on the page, hide the badge to avoid a dead link
+    badge.style.display = 'none';
+  }
+})();</script></body>
 </html>
